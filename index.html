@@ -11,9 +11,23 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script>
+        function ValidateEmail() {
+          let mail = document.getElementById("text").value;
 
+          let validRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+          if (validRegex.text(mail)) {
+            alert("Valid email address!");
+            return true;
+          } else {
+            alert("Invalid email address!");
+            return false;
+          }
+        }
+    </script>
     <title>Frontend Mentor | Base Apparel coming soon page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -38,21 +52,24 @@
           </h4>
           <p class="tag">
             Hello fellow shoppers! We're currently building our
-            <span class="line-break">new</span> fashion store. Add your
-            email below to stay up-to-date
+            <span class="line-break">new</span> fashion store. Add your email
+            below to stay up-to-date
             <span class="line-break">with</span> announcements and our launch
             deals.
           </p>
         </div>
         <div class="email-address">
           <form>
-            <input type=text placeholder="Email Address"><button><img src="/images/icon-arrow.svg"></button>
+            <input id="text" type="text" placeholder="Email Address" /><button
+              onclick="ValidateEmail()"
+              type="button"
+            >
+              <img src="/images/icon-arrow.svg" />
+            </button>
           </form>
-          
         </div>
       </div>
-      <div class="hero-image">
-      </div>
+      <div class="hero-image"></div>
     </div>
     <footer>
       <p class="attribution">
