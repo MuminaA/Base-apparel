@@ -136,6 +136,21 @@ button {
 
 button:hover {
   cursor: pointer;
-  background: hsla(0, 95%, 85%, 0.74);
+  background: hsl(0, 95%, 85%);
   block-size: 40px;
+  transform: scale(1.2)
 }
+
+#invalid_text {
+  padding-top: 55px;
+  padding-left: 30px;
+  color: var(--Soft-Red);
+  display: none;
+}
+
+#error_logo {
+  padding-right: 85px;
+  display: none;
+}
+
+

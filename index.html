@@ -11,21 +11,6 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <script>
-        function ValidateEmail() {
-          let mail = document.getElementById("text").value;
-
-          let validRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-
-          if (validRegex.text(mail)) {
-            alert("Valid email address!");
-            return true;
-          } else {
-            alert("Invalid email address!");
-            return false;
-          }
-        }
-    </script>
     <title>Frontend Mentor | Base Apparel coming soon page</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -60,13 +45,22 @@
         </div>
         <div class="email-address">
           <form>
-            <input id="text" type="text" placeholder="Email Address" /><button
-              onclick="ValidateEmail()"
-              type="button"
-            >
+            <input
+              id="text"
+              type="email"
+              placeholder="Email Address"
+              name="email"
+            />
+            <div id="error_logo">
+              <img src="images/icon-error.svg" class="error_logo">
+            </div>
+            <button type="button" id="button">
               <img src="/images/icon-arrow.svg" />
             </button>
           </form>
+        </div>
+        <div id="invalid_text">
+          <p class="invalid_text">Please provide a valid email</p>
         </div>
       </div>
       <div class="hero-image"></div>
@@ -79,5 +73,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </footer>
+    <script src='app.js'></script>
   </body>
 </html>
